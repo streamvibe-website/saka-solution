@@ -18,7 +18,7 @@ body {
 
 
 .logo-img {
-    height: 100px;
+    height: 80px;
     width: auto;
   }
   
@@ -45,62 +45,94 @@ body {
   font-size: 1.2rem;
 }
 
-.headline-section {
-  text-align: center;
-  margin: 50px auto;
-  max-width: 900px;
+.hero-main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.headline-section h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 30px;
+.hero-main-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.headline-video {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px auto;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  
-
-.slogan {
-  font-weight: bold;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
-  display: inline-block;
-  padding: 6px 10px;
+.hero-sinan {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.slogan-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 10px;
-    gap: 16px;
-  }
-  
-  .slogan-text {
-    font-weight: bold;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-  }
-  
-  .slogan-line {
-    flex: 1;
-    height: 2px;
-    background-color: #000;
-  }
-  
+.hero-sinan-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.hero-webdesign {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-webdesign-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.hero-streamvibe {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-streamvibe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.streamvibe-button {
+  position: absolute; /* für flexible Platzierung */
+  top: 70%;           /* Beispiel: mittig von oben */
+  left: 17.75%;          /* Beispiel: mittig von links */
+  transform: translate(-50%, -50%); /* zentriert exakt */
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 12px 24px;
+  text-decoration: none;
+  border: none;
+  border-radius: px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.streamvibe-button:hover {
+  background-color: #333;
+}
+
+
+
+
+
+
+
 
 /* Dropdown-Logik */
 .dropdown {
@@ -139,197 +171,4 @@ body {
     background-color: #f0f0f0;
   }
   
-  .streamvibe-hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .streamvibe-hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .streamvibe-button {
-    position: absolute;
-    bottom: 120px;
-    left: 17.3%;
-    transform: translateX(-50%);
-    background-color: #c2c2c2;
-    color: #000;
-    font-weight: 700;
-    text-decoration: underline;
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .streamvibe-button:hover {
-    background-color: #d4d4d4;
-  }
-  
-  
-  
-  .webdesign-hero {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .webdesign-hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  
-  .digital-hero {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .digital-hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-
-  .digital-button {
-    position: absolute;
-    bottom: 200px;
-    left: 14.1%;
-    transform: translateX(-50%);
-    background-color: #c2c2c2;
-    color: #000;
-    font-weight: 700;
-    text-decoration: underline;
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .digital-button:hover {
-    background-color: #d4d4d4;
-  }
-
-  .support-hero {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .support-hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-
-  .about-hero {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .about-hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-
-  .contact-section {
-    background-color: #fff;
-    padding: 80px 20px;
-    text-align: center;
-  }
-  
-  .contact-section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  .contact-section p {
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto 40px;
-    color: #333;
-  }
-  
-  .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 14px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: inherit;
-  }
-  
-  .contact-form button {
-    background-color: #c2c2c2;
-    color: #000;
-    font-weight: 700;
-    text-decoration: underline;
-    padding: 14px;
-    font-size: 1.1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .contact-form button:hover {
-    background-color: #d4d4d4;
-  }
-  
-
-  .main-footer {
-    background-color: #e0e0e0;
-    padding: 40px 20px;
-    text-align: center;
-    color: #333;
-    font-size: 0.95rem;
-  }
-  
-  .footer-inner a {
-    color: #000;
-    text-decoration: underline;
-    margin: 0 8px;
-    font-weight: 500;
-  }
-  
-  .footer-inner a:hover {
-    text-decoration: none;
-  }
-  
-  section[class^="hero"] img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
   
