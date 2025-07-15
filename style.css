@@ -112,37 +112,7 @@ header {
   background-color: #e0eafc;
 }
 
-/* === Dropdown Menü === */
-.nav-list li.dropdown {
-  position: relative;
-}
 
-.nav-list li .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background-color: #0a1e40;
-  min-width: 180px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
-  border-radius: 4px;
-}
-
-.nav-list li .dropdown-content li {
-  padding: 0;
-}
-
-.nav-list li .dropdown-content li a {
-  display: block;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.nav-list li .dropdown-content li a:hover {
-  background-color: #1e3c72;
-}
 
 /* Aktivieren bei Hover */
 .nav-list li.dropdown:hover .dropdown-content {
