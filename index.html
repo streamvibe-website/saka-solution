@@ -3,65 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAKA Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Saka Solutions – IT & Sales</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body> 
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="assets/logo_white_no_bg.png" alt="Saka Solutions Logo">
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li class="dropdown">
+            <a href="#leistungen">Leistungen</a>
+            <ul class="dropdown-content">
+              <li><a href="#webseiten">Webseiten</a></li>
+              <li><a href="#streamingbox">Streamingbox</a></li>
+              <li><a href="#itsupport">IT-Support</a></li>
+            </ul>
+          </li>
+          <li><a href="#ueber">Über mich</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>      
+    </div>
+  </header>
 
-    <header class="topbar">
-        <div class="logo-area">
-            <img src="assets/logo.png" alt="SAKA Solutions Logo" class="logo-img">
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Technik, die funktioniert.<br><span>Lösungen, die helfen.</span></h1>
+        <p>Webseiten. Streamingboxen. IT für Menschen.</p>
+        <div class="hero-buttons">
+          <a href="#leistungen" class="btn btn-primary">Leistungen ansehen</a>
+          <a href="#kontakt" class="btn btn-secondary">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="leistungen" class="leistungen">
+      <div class="container">
+        <h2>Unsere Leistungen</h2>
+        <div class="leistungen-grid">
+          
+          <div class="leistung" id="webseiten">
+            <i class="fas fa-globe fa-2x icon"></i>
+            <h3>Webseiten</h3>
+            <p>Moderne Webseiten für kleine Unternehmen – mobilfreundlich, schnell, professionell.</p>
+            <a href="#kontakt" class="btn btn-primary">Jetzt anfragen</a>
           </div>
           
-        <nav class="nav-area">
-          <ul>
-            <li><a href="#start">Start</a></li>
-            <li class="dropdown">
-                <a href="#leistungen">Leistungen</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#handel">Handel</a></li>
-                  <li><a href="#webdesign">Webdesign</a></li>
-                  <li><a href="#digitale-inhalte">Digitale Inhalte</a></li>
-                  <li><a href="#it-support">IT Support</a></li>
-                </ul>
-              </li>
-              
-            <li><a href="#ueber-mich">Über mich</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-          </ul>
-        </nav>
-      </header>
-      
-      <section class="hero-main">
-        <video autoplay muted loop playsinline class="hero-main-bg">
-          <source src="assets/hero-main.mp4" type="video/mp4">
-          Dein Browser unterstützt dieses Video-Format nicht.
-        </video>
-      </section>
-      
-      <section class="hero-sinan">
-        <img src="assets/hero-sinan.png" alt="Hero Sinan" class="hero-sinan-image">
-      </section>
-      
-      <section class="hero-webdesign">
-        <img src="assets/hero-webdesign.png" alt="Hero Webdesign" class="hero-webdesign-image">
-      </section>
-      
+          <div class="leistung" id="streamingbox">
+            <i class="fas fa-tv fa-2x icon"></i>
+            <h3>Streamingbox</h3>
+            <p>StreamVibe Box mit Einrichtung & Support – ready für Netflix, Prime & Co.</p>
+            <a href="https://streamvibe.de" target="_blank" class="btn btn-primary">Zur Produktseite</a>
+          </div>
+          
+          
+          <div class="leistung" id="itsupport">
+            <i class="fas fa-tools fa-2x icon"></i>
+            <h3>IT-Support</h3>
+            <p>Technikhilfe, Fernwartung & Automatisierung – verständlich erklärt, effizient gelöst.</p>
+            <a href="#kontakt" class="btn btn-primary">Support buchen</a>
+          </div>
 
-      <section class="hero-streamvibe">
-        <img src="assets/hero-streamvibe.png" alt="Hero StreamVibe" class="hero-streamvibe-image">
-        <a href="https://streamvibe.de" class="streamvibe-button">Mehr entdecken auf streamvibe.de</a>
-      </section>
-      
-      
+          <div class="leistung">
+            <i class="fas fa-comments fa-2x icon"></i>
+            <h3>Technik-Beratung</h3>
+            <p>Du planst neue Geräte, WLAN oder smarte Lösungen? Ich berate ehrlich, unabhängig und verständlich.</p>
+            <a href="#kontakt" class="btn btn-primary">Beratung anfragen</a>
+          </div>
+          
+          <div class="leistung">
+            <i class="fas fa-arrows-rotate fa-2x icon"></i>
+            <h3>Automatisierung</h3>
+            <p>Ich optimiere Prozesse mit Zapier, Make & Co. – z. B. automatische Mails, Formulare oder Dokumente.</p>
+            <a href="#kontakt" class="btn btn-primary">Abläufe digitalisieren</a>
+          </div>
+          
+          <div class="leistung">
+            <i class="fas fa-chalkboard-user fa-2x icon"></i>
+            <h3>IT-Kurse</h3>
+            <p>Einsteigerfreundliche Kurse zu Web, Technik & Sicherheit – als Workshop oder 1:1.</p>
+            <a href="#kontakt" class="btn btn-primary">Kurs buchen</a>
+          </div>
+          
+          
+    
+        </div>
+      </div>
+    </section>
+    
 
+    <section id="ueber" class="ueber-mich">
+      <div class="container ueber-content">
+        <div class="ueber-text">
+          <h2>Über mich</h2>
+          <p>Ich bin Sinan Sakacilar – Technik ist seit jeher meine Leidenschaft.  
+          Als gelernter Maschinenbautechniker mit starkem IT-Fokus helfe ich Menschen und kleinen Unternehmen, digitale Lösungen stressfrei und verständlich umzusetzen.  
+          Ob Webseiten, Streamingboxen oder technischer Support – ich finde Lösungen, wo andere aufgeben.</p>
+          <p>Direkt. Ehrlich. Verlässlich.</p>
+        </div>
+        <div class="ueber-bild">
+          <!-- Optional: Bild einfügen -->
+          <!-- <img src="sinan.jpg" alt="Sinan Sakacilar"> -->
+        </div>
+      </div>
+    </section>
+    
 
+    <section id="kontakt" class="kontakt">
+      <div class="container kontakt-container">
+        <h2>Kontakt aufnehmen</h2>
+        <p>Du hast Fragen oder möchtest ein Angebot? Ich melde mich zeitnah zurück.</p>
+        
+        <form action="https://formsubmit.co/bestellung@streamvibe.de" method="POST" class="kontakt-form">
+          <input type="text" name="name" placeholder="Dein Name" required>
+          <input type="email" name="email" placeholder="Deine E-Mail" required>
+          
+          <select name="anliegen" required>
+            <option value="">Anliegen wählen</option>
+            <option value="webseite">Webseite erstellen lassen</option>
+            <option value="streamvibe">Frage zur Streamingbox</option>
+            <option value="support">Technischer Support</option>
+            <option value="support">Technik Beratung</option>
+            <option value="support">Automatisierung</option>
+            <option value="support">IT Kurse</option>
+            <option value="sonstiges">Sonstiges</option>
+          </select>
+          
+          <textarea name="nachricht" rows="5" placeholder="Deine Nachricht" required></textarea>
+        
+          <label class="checkbox-container">
+            <input type="checkbox" name="datenschutz" required>
+            <span>Ich stimme der <a href="datenschutz.html" target=_blank>Datenschutzerklärung</a> zu.</span>
+          </label>
+        
+          <input type="hidden" name="_next" value="https://streamvibe.de/danke.html">
+          <input type="hidden" name="_captcha" value="false">
+        
+          <button type="submit" class="btn btn-primary">Nachricht senden</button>
+        </form>
+        
+      </div>
+    </section>
+    
 
+    <footer class="footer">
+      <div class="footer-container container">
+    
+        <div class="footer-logo">
+          <img src="assets/logo_white_no_bg.png" alt="Saka Solutions Logo">
+        </div>
+    
+        <ul class="footer-nav">
+          <li><a href="#start">Start</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="agb.html">AGB</a></li>
+        </ul>
+    
+        <p class="footer-kontakt">Kontakt: <a href="mailto:support@streamvibe.de">support@streamvibe.de</a></p>
+        <p class="footer-copy">&copy; 2025 Saka Solutions – Alle Rechte vorbehalten</p>
+    
+      </div>
+    </footer>
+    
+    
+    
 
+  </main>
 </body>
 </html>
