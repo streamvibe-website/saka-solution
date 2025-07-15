@@ -27,7 +27,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; /* Wichtig für absolute Positionierung */
 }
+
 
 .logo img {
   height: 50px;
@@ -315,7 +317,12 @@ header {
   flex-direction: column;
   cursor: pointer;
   padding: 10px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
+
 
 .menu-toggle .bar {
   height: 3px;
