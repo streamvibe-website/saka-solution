@@ -339,3 +339,48 @@ header {
 }
 
 
+/* === Mobile Navigation === */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #0a1e40;
+    flex-direction: column;
+    gap: 0;
+    width: 200px;
+    display: none;
+    border-radius: 5px;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list li {
+    padding: 15px 20px;
+  }
+
+  .nav-list li a {
+    color: white;
+  }
+}

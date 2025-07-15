@@ -15,6 +15,15 @@
       <div class="logo">
         <img src="assets/logo_white_no_bg.png" alt="Saka Solutions Logo">
       </div>
+  
+      <!-- HAMBURGER BUTTON HIER -->
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+  
+      <!-- NAVIGATION -->
       <nav>
         <ul class="nav-list">
           <li class="dropdown">
@@ -28,9 +37,10 @@
           <li><a href="#ueber">Über mich</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
-      </nav>      
+      </nav>
     </div>
   </header>
+  
 
   <main>
     <section class="hero">
@@ -179,5 +189,17 @@
     
 
   </main>
+
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+  
+    mobileMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+  </script>
+  
+
 </body>
 </html>
