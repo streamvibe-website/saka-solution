@@ -57,7 +57,7 @@ header {
 /* === Hero-Sektion === */
 
 .hero {
-  background: linear-gradient(-45deg, #543573, #1573ff, #396897, #543573) !important;
+  background: linear-gradient(-45deg, #77adff, #1f4f97, #1f4f97, #77adff) !important;
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   color: white;
@@ -169,27 +169,27 @@ header {
 
 /* === Farbverläufe für Leistungskarten === */
 .leistung.web {
-  background: linear-gradient(135deg, #93c5fd, #60a5fa);
+  background: linear-gradient(135deg, #93c5fd, #1f599b);
   color: white;
 }
 .leistung.stream {
-  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  background: linear-gradient(135deg, #3daa86, #002318);
   color: white;
 }
 .leistung.support {
-  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+  background: linear-gradient(135deg, #cbf652, #56720a);
   color: white;
 }
 .leistung.beratung {
-  background: linear-gradient(135deg, #1e3a8a, #1e293b);
+  background: linear-gradient(135deg, #fcb777, #96500f);
   color: white;
 }
 .leistung.automation {
-  background: linear-gradient(135deg, #1e293b, #0f172a);
+  background: linear-gradient(135deg, #ff4747, #6d0a0a);
   color: white;
 }
 .leistung.kurse {
-  background: linear-gradient(135deg, #0f172a, #1c1f2b);
+  background: linear-gradient(135deg, #480b0b, #480b0b);
   color: white;
 }
 
