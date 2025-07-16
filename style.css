@@ -57,7 +57,7 @@ header {
 /* === Hero-Sektion === */
 
 .hero {
-  background: linear-gradient(135deg, #0a1e40 0%, #1e3c72 100%);
+  background: linear-gradient(135deg, #354e58 0%, #1ecaf5 100%);
   color: white;
   padding: 100px 0;
   text-align: center;
@@ -150,26 +150,55 @@ header {
   transition: transform 0.2s ease;
 }
 
+/* === Farbverläufe für Leistungskarten === */
+.leistung.web {
+  background: linear-gradient(135deg, #93c5fd, #60a5fa);
+  color: white;
+}
+.leistung.stream {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  color: white;
+}
+.leistung.support {
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+  color: white;
+}
+.leistung.beratung {
+  background: linear-gradient(135deg, #1e3a8a, #1e293b);
+  color: white;
+}
+.leistung.automation {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: white;
+}
+.leistung.kurse {
+  background: linear-gradient(135deg, #0f172a, #1c1f2b);
+  color: white;
+}
+
+
 .leistung:hover {
   transform: translateY(-5px);
 }
 
 .leistung h3 {
   margin-top: 0;
-  color: #1e3c72;
+  color: #ffffff;
 }
 
 .leistung p {
   font-size: 16px;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
 .icon {
-  color: #0a1e40;
+  color: #ffffff;
   margin-bottom: 15px;
   display: block;
 }
+
+
 
 
 /* === Über mich === */
@@ -360,4 +389,174 @@ header {
   .nav-list li a {
     color: white;
   }
+}
+
+
+@keyframes gradient-animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  background: linear-gradient(-45deg, #0a1e40, #1e3c72, #2b5dab, #61a4f1);
+  background-size: 400% 400%;
+  animation: gradient-animate 20s ease infinite;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.features li {
+  color: white;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.icon-check {
+  color: white;
+  margin-top: 2px;
+  min-width: 16px;
+}
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.scroll-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.preise {
+  padding: 80px 20px;
+  background: #f9fbff;
+  text-align: center;
+}
+
+.preise-label {
+  display: inline-block;
+  font-size: 14px;
+  color: #1570ef;
+  font-weight: 600;
+  background: #e6f0ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.preise h2 {
+  font-size: 36px;
+  color: #0a1e40;
+  margin-bottom: 10px;
+}
+
+.preise-subtitle {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.preisbox {
+  background: linear-gradient(135deg, #e09b6c, #7c4a0d);
+  color: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.preis-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.preis {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.preis span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.preis-leistungen {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.preis-leistungen li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.preis-hinweis {
+  margin-top: 40px;
+}
+
+.preis-hinweis h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.preis-info ul {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.preis-info li {
+  margin-bottom: 10px;
+}
+
+.preis-hinweis-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.details-liste {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.details-liste li {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.details-liste i {
+  color: #555;
+  margin-right: 10px;
+  min-width: 20px;
 }
