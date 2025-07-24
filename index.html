@@ -411,8 +411,10 @@
   
   
   
-  <script>
-    console.log("JS wird geladen");
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("gSRKaBlZaeOiZqoSD");
+    })();
   
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("kontaktForm");
@@ -422,13 +424,36 @@
   
         form.addEventListener("submit", function (e) {
           e.preventDefault();
-          alert("Eventlistener funktioniert!");
+  
+          emailjs.sendForm("service_ffxtjub", "template_ac3e2f5", form).then(
+            function () {
+              console.log("E-Mail an Kunde erfolgreich gesendet.");
+  
+              // Zweite Mail an dich
+              emailjs.sendForm("service_ffxtjub", "template_mx8x3mp", form).then(
+                function () {
+                  console.log("E-Mail an Admin erfolgreich gesendet.");
+                  alert("Vielen Dank für deine Nachricht – wir melden uns!");
+                  form.reset();
+                },
+                function (error) {
+                  console.error("Fehler bei E-Mail an Admin:", error);
+                  alert("Fehler beim Versenden der Bestätigung. Bitte erneut versuchen.");
+                }
+              );
+            },
+            function (error) {
+              console.error("Fehler bei E-Mail an Kunde:", error);
+              alert("Nachricht konnte nicht gesendet werden.");
+            }
+          );
         });
       } else {
         console.warn("Formular nicht gefunden");
       }
     });
   </script>
+  
   
   
   
