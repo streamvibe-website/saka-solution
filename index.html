@@ -413,43 +413,44 @@
   
   <script type="text/javascript">
     // EmailJS initialisieren
-    emailjs.init("gSRKaBlZaeOiZqoSD"); // z. B. "MvAh7abc123xyz"
+    emailjs.init("gSRKaBlZaeOiZqoSD");
   
-    function sendEmail(event) {
-      event.preventDefault();
+    function sendEmail(e) {
+      e.preventDefault();
   
-      const form = document.getElementById("kontaktForm"); // ID vom Formular
+      const form = document.getElementById("kontaktForm");
+  
       const formData = {
         name: form.name.value,
         email: form.email.value,
         anliegen: form.anliegen.value,
         nachricht: form.nachricht.value,
-        date: new Date().toLocaleString('de-DE'),
+        date: new Date().toLocaleString('de-DE')
       };
   
-      // 1. Automatische Antwort an den Kunden
+      // Auto-Reply an den Kunden
       emailjs.send("service_ffxtjub", "template_ac3e2f5", formData)
         .then(() => {
-          console.log("Auto-Reply erfolgreich versendet.");
+          console.log("Kundenbestätigung versendet.");
         }, (error) => {
-          console.error("Fehler beim Senden des Auto-Replies:", error);
+          console.error("Fehler beim Auto-Reply:", error);
         });
   
-      // 2. Interne Nachricht an dich
+      // Interne Mail an dich
       emailjs.send("service_ffxtjub", "template_mx8x3mp", formData)
         .then(() => {
-          console.log("Interne Mail erfolgreich versendet.");
-          alert("Vielen Dank! Wir haben deine Nachricht erhalten.");
+          alert("✅ Vielen Dank! Deine Nachricht wurde erfolgreich versendet.");
           form.reset();
         }, (error) => {
-          console.error("Fehler beim Senden der internen Mail:", error);
-          alert("Es ist ein Fehler aufgetreten. Bitte versuche es erneut.");
+          console.error("Fehler beim internen Versand:", error);
+          alert("❌ Es gab ein Problem beim Senden. Bitte später erneut versuchen.");
         });
     }
   
-    // Formular-Eventlistener setzen
+    // Eventlistener setzen
     document.getElementById("kontaktForm").addEventListener("submit", sendEmail);
   </script>
+  
   
 
 </body>
