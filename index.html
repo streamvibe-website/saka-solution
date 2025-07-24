@@ -315,7 +315,7 @@
         <h2>Kontakt aufnehmen</h2>
         <p>Du hast Fragen oder möchtest ein Angebot? Ich melde mich zeitnah zurück.</p>
         
-        <form action="https://formsubmit.co/bestellung@streamvibe.de" method="POST" class="kontakt-form">
+        <form id="kontaktForm" class="kontakt-form">
           <input type="text" name="name" placeholder="Dein Name" required>
           <input type="email" name="email" placeholder="Deine E-Mail" required>
           
@@ -409,7 +409,48 @@
     document.querySelectorAll('.scroll-fade-in').forEach(el => observer.observe(el));
   </script>
   
-    
+  
+  
+  <script type="text/javascript">
+    // EmailJS initialisieren
+    emailjs.init("gSRKaBlZaeOiZqoSD"); // z. B. "MvAh7abc123xyz"
+  
+    function sendEmail(event) {
+      event.preventDefault();
+  
+      const form = document.getElementById("kontaktForm"); // ID vom Formular
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        anliegen: form.anliegen.value,
+        nachricht: form.nachricht.value,
+        date: new Date().toLocaleString('de-DE'),
+      };
+  
+      // 1. Automatische Antwort an den Kunden
+      emailjs.send("service_ffxtjub", "template_ac3e2f5", formData)
+        .then(() => {
+          console.log("Auto-Reply erfolgreich versendet.");
+        }, (error) => {
+          console.error("Fehler beim Senden des Auto-Replies:", error);
+        });
+  
+      // 2. Interne Nachricht an dich
+      emailjs.send("service_ffxtjub", "template_mx8x3mp", formData)
+        .then(() => {
+          console.log("Interne Mail erfolgreich versendet.");
+          alert("Vielen Dank! Wir haben deine Nachricht erhalten.");
+          form.reset();
+        }, (error) => {
+          console.error("Fehler beim Senden der internen Mail:", error);
+          alert("Es ist ein Fehler aufgetreten. Bitte versuche es erneut.");
+        });
+    }
+  
+    // Formular-Eventlistener setzen
+    document.getElementById("kontaktForm").addEventListener("submit", sendEmail);
+  </script>
+  
 
 </body>
 </html>
