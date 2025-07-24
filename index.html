@@ -411,45 +411,25 @@
   
   
   
-  <script type="text/javascript">
-    // EmailJS initialisieren
-    emailjs.init("gSRKaBlZaeOiZqoSD");
+  <script>
+    console.log("JS wird geladen");
   
-    function sendEmail(e) {
-      e.preventDefault();
-  
+    document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("kontaktForm");
   
-      const formData = {
-        name: form.name.value,
-        email: form.email.value,
-        anliegen: form.anliegen.value,
-        nachricht: form.nachricht.value,
-        date: new Date().toLocaleString('de-DE')
-      };
+      if (form) {
+        console.log("Formular gefunden");
   
-      // Auto-Reply an den Kunden
-      emailjs.send("service_ffxtjub", "template_ac3e2f5", formData)
-        .then(() => {
-          console.log("Kundenbestätigung versendet.");
-        }, (error) => {
-          console.error("Fehler beim Auto-Reply:", error);
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Eventlistener funktioniert!");
         });
-  
-      // Interne Mail an dich
-      emailjs.send("service_ffxtjub", "template_mx8x3mp", formData)
-        .then(() => {
-          alert("✅ Vielen Dank! Deine Nachricht wurde erfolgreich versendet.");
-          form.reset();
-        }, (error) => {
-          console.error("Fehler beim internen Versand:", error);
-          alert("❌ Es gab ein Problem beim Senden. Bitte später erneut versuchen.");
-        });
-    }
-  
-    // Eventlistener setzen
-    document.getElementById("kontaktForm").addEventListener("submit", sendEmail);
+      } else {
+        console.warn("Formular nicht gefunden");
+      }
+    });
   </script>
+  
   
   
 
